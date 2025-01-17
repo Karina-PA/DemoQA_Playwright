@@ -6,7 +6,10 @@ class DragabblePage {
         this.withinParentEl = page.locator('//*[@class="ui-widget-header ui-draggable ui-draggable-handle"]');
         this.boxUp = page.locator('#containmentWrapper');
         this.boxLow = page.locator('//*[@class="draggable ui-widget-content m-3"]');
-        this.pointOut = page.locator('.dragable-container>h1');
+        this.pointOutUp = page.locator('.dragable-container>h1');
+        this.pointOutLow = page.locator('#adplus-anchor');
+        this.pointOutLeft = page.locator('//*[text()="Droppable"]');
+        this.pointOutRight = page.locator('.Google-Ad');
     }
 }
 
