@@ -60,7 +60,7 @@ test.describe('Prevent Propogation Tab Tests', () => {
 
 test.describe('Revert Draggable Tab Tests', () => {
 
-    test('Should return "Will revert" item to origin place after draggable', async ({ page }) => {
+    test('Should return "Will revert" item to origin place after dragging', async ({ page }) => {
         const droppablePage = new DroppablePage(page);
         await droppablePage.revertDragTab.click();
         await droppablePage.revertEl.dragTo(droppablePage.dropBoxRev);
@@ -70,7 +70,7 @@ test.describe('Revert Draggable Tab Tests', () => {
         await expect(await droppablePage.revertEl.getAttribute('style')).toBe(droppablePage.positionRevEl);
     });
 
-    test('Should not return "Not revert" item to origin place after draggable', async ({ page }) => {
+    test('Should not return "Not revert" item to origin place after dragging', async ({ page }) => {
         const droppablePage = new DroppablePage(page);
         await droppablePage.revertDragTab.click();
         let positionNotRevEl = await page.locator('#notRevertable').getAttribute("style");
